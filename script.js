@@ -9,9 +9,17 @@ function run() {
 }
 
 document.getElementById("load-url-btn").addEventListener("click", function() {
+    const btn = this;
     let url = document.getElementById("url-input").value;
     if (url) {
-        document.getElementById("output").src = url;
+        btn.textContent = "Loading...";
+        btn.disabled = true;
+        const output = document.getElementById("output");
+        output.src = url;
+        output.onload = function() {
+            btn.textContent = "Load";
+            btn.disabled = false;
+        };
     }
 });
 
