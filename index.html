@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Code Editor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Live Code Editor</h1>
+        <div class="url-container">
+            <input type="text" id="url-input" placeholder="Enter URL to load">
+            <button id="load-url-btn">Load</button>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="editor-container">
+            <div class="editor">
+                <h2>HTML</h2>
+                <textarea id="html-code" onkeyup="run()"></textarea>
+            </div>
+            <div class="editor">
+                <h2>CSS</h2>
+                <textarea id="css-code" onkeyup="run()"></textarea>
+            </div>
+            <div class="editor">
+                <h2>JavaScript</h2>
+                <textarea id="js-code" onkeyup="run()"></textarea>
+            </div>
+        </div>
+        <div class="output-container">
+            <iframe id="output"></iframe>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
