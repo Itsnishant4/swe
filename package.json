@@ -1,0 +1,8 @@
+{
+  "name": "live-code-editor",
+  "version": "1.0.0",
+  "description": "A live HTML, CSS, and JavaScript editor.",
+  "main": "index.html",
+  "scripts": {
+    "start": "lite-server"
+  },
